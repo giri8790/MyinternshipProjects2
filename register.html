@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <center>
+       <style>
+          .center-form{
+              justify-content: center;
+              width:600px;
+              height: auto;
+              font-size:  20px;;
+              margin: 0 auto;
+              border: 3px solid blue;
+              padding: 30px;
+              background-color: rgb(178, 236, 158);
+           }
+       </style>
+  </head>
+<body>
+      <h1 style="color:blue;">Register  for Connect</h1>
+      <p><b>Please fill in this form to register</b></p>
+</center>
+    <div class="center-form">
+      <form action="registerlogin.html" name="myform" onsubmit="return validateform()" method="get">
+        <label for="nam"><b>First name:</b></label>
+        <input type="text" id="nam" name="nam" value=""><br><br>
+        <label for="nam1"><b>Middle name:</b></label>
+        <input type="text" id="nam1" name="nam1" value=""><br><br>
+        <label for="nam2"><b>Last name:</b></label>
+        <input type="text" id="nam2" name="nam2" value=""><br><br>
+        <label for="nam2"><b>Your DOB:</b></label>
+        <input type="date" id="nam2" name="nam2" value=""><br><br>
+        <label for="degree"><b>Course :</b></label>
+        <select id="degree">
+              <option>B.E</option>
+              <option>B.sc</option>
+              <option>B.Tech</option>
+              <option>B.Ed</option>
+              <option>B.Com</option>
+         </select><br><br>
+       <label><b>Gender:</b></lable><br>
+       <input type="Radio" id="html" name="name" value="">
+       <label for="html">Male</label><br>
+       <input type="Radio" id="html" name="name" value="">
+       <label for="html">Female</label><br>
+       <input type="Radio" id="html" name="name" value="">
+       <label for="html">Other</label><br><br>
+       <label for="phone"><b>Enter a phone number:</b></label>
+       <input type="tel" id="phone" name="phone"><br><br>
+       <label for="name"><b>Address:</b></label>
+       <input type="text" id="name" name="name" value=""><br><br>
+       <label for="email"><b>Enter your email:</b></label>
+       <input type="email" id="email" name="email"><br><br>
+       <label for="pwd"><b>Password</b>:</label>
+       <input type="password" id="pwd" name="pwd" minlength="8"><br><br>
+       <label for="pwd1"><b>Confirm Password:</b></label>
+       <input type="password" id="pwd1" name="pwd1" minlength="8"><br><br>
+       <center><input type="submit" value="Register" name="myform"></center><br>
+       <center><input type="reset" name="reset" value="Reset"></center>
+    </div>
+   </form>
+<script>
+    function validateform(){  
+       var name=document.myform.nam.value;  
+       var password=document.myform.pwd.value;  
+       var password1=document.myform.pwd1.value;
+       var emai=document.myform.email.value;
+       if(name==""){  
+          alert("Name can't be blank");  
+          return false;  
+       }
+       else if(password.length<6){  
+            alert("Password must be at least 6 characters long.");  
+            return false;  
+       }  
+       else if(password!=password1) {
+             alert("Password must be same");  
+             return false;
+       }
+    }
+ </script>
+</body>
+</html>
